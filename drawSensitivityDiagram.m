@@ -1,5 +1,7 @@
 function drawSensitivityDiagram(x1_init, y1_init, x2_init, y2_init, timespace)
 
+    % Sample run: drawSensitivityDiagram(0.555, 0.012, 0.553, 0.010, 50)
+
     % Define the constant values
     RHO = 1.29;
     GAMMA = 0.3;
