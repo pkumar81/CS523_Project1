@@ -1,4 +1,4 @@
-function drawxyplot(x,y,t,phi,gamma)
+function [x_vals, y_vals] = drawxyplot(x,y,t,phi,gamma)
     %store the initial values x0,y0
     x_vals = [x]; 
     y_vals = [y];
@@ -12,19 +12,6 @@ function drawxyplot(x,y,t,phi,gamma)
         x = x_new;
         y = y_new;
     end
-
-% draw the plot using x_vals, y_vals and t
-x_axis = 0:1:t;
-y_axis = x_vals;
-yyaxis left;
-plot(x_axis,y_axis);
-title('2D Dynamical Regimes');
-ylabel('X values');
-xlabel('t values');
-yyaxis right;
-y_axis = y_vals;
-plot(x_axis,y_axis,'--');
-ylabel('Y values');
 end
 
 
