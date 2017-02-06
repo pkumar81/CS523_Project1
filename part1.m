@@ -1,7 +1,11 @@
 % draw the plot using x_vals, y_vals and t
 %fixed foint
-t = 50;
-[x_vals, y_vals] = drawxyplot(1,1,t,0.2,0.3);
+t = 100;
+x=0.5;
+y=1.0;
+rho=0.1394;
+gamma = 0.1735;
+[x_vals, y_vals] = drawxyplot(x,y,t,rho,gamma);
 x_axis = 0:1:t;
 y_axis = x_vals;
 yyaxis left;
@@ -15,7 +19,11 @@ subplot(3,1,1),plot(x_axis,y_axis,'--');
 ylabel('Y values');
 
 hold on;
-[x_vals, y_vals] = drawxyplot(0,0,t,0.5,0.7);
+%rho=0.1;
+%gamma = 0.7796;
+rho = 1.0455;
+gamma = 0.2469;
+[x_vals, y_vals] = drawxyplot(x,y,t,rho,gamma);
 x_axis = 0:1:t;
 y_axis = x_vals;
 yyaxis left;
@@ -29,16 +37,18 @@ subplot(3,1,2),plot(x_axis,y_axis,'--');
 ylabel('Y values');
 
 hold on;
-t=5050;
-[x_vals, y_vals] = drawxyplot(0,0,t,0.45,0.76);
-x_axis = 5001:1:t;
-y_axis = x_vals(5001:t);
+t=9100;
+rho=1.1242;
+gamma = 0.4673;
+[x_vals, y_vals] = drawxyplot(x,y,t,rho,gamma);
+x_axis = 9001:1:t;
+y_axis = x_vals(9001:t);
 yyaxis left;
 subplot(3,1,3), plot(x_axis,y_axis);
 title('Complex');
 ylabel('X values');
 xlabel('t values');
 yyaxis right;
-y_axis = y_vals(5001:t);
+y_axis = y_vals(9001:t);
 subplot(3,1,3),plot(x_axis,y_axis,'--');
 ylabel('Y values');
