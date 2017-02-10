@@ -48,8 +48,8 @@ function attractor2(a0,b0,c0,t_max,x0)
 	plot3(X(:,1), X(:,2), X(:,3), 'r-'); hold on
 	plot3(xfp1(1), yfp1(1), zfp1(1),'k*');
 	plot3(xfp1(2), yfp1(2), zfp1(2),'b*');
-	title('Attractor with fixed points in 3D plane','FontSize', 11);
-	xlabel('X','FontSize', 11); ylabel('Y','FontSize', 11); zlabel('Z','FontSize', 11);
+	title('Attractor with fixed points in 3D plane','FontSize', 13);
+	xlabel('X','FontSize', 13); ylabel('Y','FontSize', 13); zlabel('Z','FontSize', 13);
     hold off
 	
 	figure;

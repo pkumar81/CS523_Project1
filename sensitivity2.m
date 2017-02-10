@@ -15,22 +15,22 @@ function sensitivity2(a0, b0, c0, t_max, x0, x1)
     subplot(3,1,1);
     plot(T1,X1(:,1),'-b*','MarkerSize',2); hold on
     plot(T2,X2(:,1), '-r','LineWidth',1); 
-    xlabel('t','FontSize', 11); ylabel('X','FontSize', 11);
-    title('Sensitivity to Initial Condition X Vs t','FontSize', 11);
+    xlabel('t','FontSize', 13); ylabel('X','FontSize', 13);
+    title('Sensitivity to Initial Condition X Vs t','FontSize', 13);
     hold off
     
     subplot(3,1,2);
     plot(T1,X1(:,2),'-b*','MarkerSize',2); hold on
     plot(T2,X2(:,2),'-r','LineWidth',1); 
-    xlabel('t','FontSize', 11); ylabel('Y','FontSize', 11);
-    title('Sensitivity to Initial Condition Y Vs t','FontSize', 11);
+    xlabel('t','FontSize', 13); ylabel('Y','FontSize', 13);
+    title('Sensitivity to Initial Condition Y Vs t','FontSize', 13);
     hold off
     
     subplot(3,1,3);
     plot(T1,X1(:,3),'-b*','MarkerSize',2); hold on
     plot(T2,X2(:,3),'-r','LineWidth',1); 
-    xlabel('t','FontSize', 11); ylabel('Z','FontSize', 11);
-    title('Sensitivity to Initial Condition Z Vs t','FontSize', 11);
+    xlabel('t','FontSize', 13); ylabel('Z','FontSize', 13);
+    title('Sensitivity to Initial Condition Z Vs t','FontSize', 13);
     hold off
 end
 

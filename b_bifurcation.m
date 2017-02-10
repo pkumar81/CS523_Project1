@@ -22,9 +22,9 @@ function b_bifurcation(a0, b0, c0, t_max, t_trans, x0)
     end
     figure;
     plot(D(:,1),D(:,2),'k.'); hold on
-    xlabel('b','FontSize', 11);
-    ylabel('y','FontSize', 11);
-    title('Bifurcation plot using parameter b','FontSize', 11); 
+    xlabel('b','FontSize', 13);
+    ylabel('y','FontSize', 13);
+    title('Bifurcation plot using parameter b','FontSize', 13); 
     hold off
 end
 
