@@ -2,7 +2,7 @@ function drawSensitivityDiagram(x1_init, y1_init, x2_init, y2_init, timespace)
 
     % This function generates the figures 2a and 2b of dynamical map of
     % project 1. 
-    % Sample run: drawSensitivityDiagram(0.555, 0.012, 0.553, 0.010, 50)
+    % Sample run: drawSensitivityDiagram(0.555, 0.012, 0.553, 0.010, 100)
 
     % Define the constant values
     RHO = 1.29;
@@ -47,20 +47,13 @@ function drawSensitivityDiagram(x1_init, y1_init, x2_init, y2_init, timespace)
     end
     
     figure
-    subplot(1,1,1);
-    title('Figrue 2a, sensitivity to initial conditions:');
+    subplot(2,1,1);
+    plot(timer, x_deviation);
+    title('Figrue 2a: Divergence with respect to time');
     xlabel('Time');
     ylabel('Divergence');
-    hold on;
-    yyaxis left;
-    plot(timer, x_deviation);
-    hold off;
-    
-    
-    
     
     % Figure 2b starts here
-        
     for i = 1:500
         x2_init = x1_init + i*0.0001;
         x1_vals = [x1_init];
@@ -89,14 +82,10 @@ function drawSensitivityDiagram(x1_init, y1_init, x2_init, y2_init, timespace)
         del_x = [del_x x2_init - x1_init];
     end
     
-    figure
-    subplot(1,1,1);
-    title('Figrue 2b, sensitivity to initial conditions:', 'Fontsize', 24);
-    xlabel('delX', 'Fontsize', 24);
-    ylabel('Divergence', 'Fontsize', 24);
-    hold on;
-    %yyaxis left;
+    subplot(2,1,2);
     plot(del_x, divergence);
-    hold off;
+    title('Figrue 2b: Divergence function for different delta-X');
+    xlabel('delta-X');
+    ylabel('Time to reach divergence point');
     
-    end
+end
