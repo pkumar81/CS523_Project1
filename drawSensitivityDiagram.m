@@ -46,12 +46,12 @@ function drawSensitivityDiagram(x1_init, y1_init, x2_init, y2_init, timespace)
         timer = [timer i];
     end
     
-    figure
+    figure;
     subplot(2,1,1);
     plot(timer, x_deviation);
-    title('Figrue 2a: Divergence with respect to time');
-    xlabel('Time');
-    ylabel('Divergence');
+    title('Figrue 2a: Divergence with respect to time','FontSize', 10);
+    xlabel('Time', 'FontSize', 10);
+    ylabel('Divergence', 'FontSize', 10);
     
     % Figure 2b starts here
     for i = 1:500
@@ -84,8 +84,9 @@ function drawSensitivityDiagram(x1_init, y1_init, x2_init, y2_init, timespace)
     
     subplot(2,1,2);
     plot(del_x, divergence);
-    title('Figrue 2b: Divergence function for different delta-X');
-    xlabel('delta-X');
-    ylabel('Time to reach divergence point');
+    title('Figrue 2b: Divergence function for different delta-X', 'FontSize', 10);
+    xlabel('delta-X', 'FontSize', 10);
+    ylabel('Time to divergence', 'FontSize', 10);
+    hold off
     
 end
